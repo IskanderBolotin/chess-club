@@ -1,0 +1,133 @@
+
+- 
+  var sliderContent = [
+    {
+      title: "Хозе-Рауль Капабланка",
+      text: "Чемпион мира по шахматам",
+      link: "/",
+      image: {
+        sources: [
+          {
+            srcset: "./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x",
+            type: "image/png",
+          }
+        ],
+        img: {
+          src: "./assets/images/avatar.png",
+          srcset: "./assets/images/avatar@2x.png 2x",
+          alt: "Хозе-Рауль Капабланка",
+        }
+      }
+    },
+    {
+      title: "Эммануил Ласкер",
+      text: "Чемпион мира по шахматам",
+      link: "/",
+      image: {
+        sources: [
+          {
+            srcset: "./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x",
+            type: "image/png",
+          }
+        ],
+        img: {
+          src: "./assets/images/avatar.png",
+          srcset: "./assets/images/avatar@2x.png 2x",
+          alt: "Эммануил Ласкер",
+        }
+      }
+    },
+    {
+      title: "Александр Алехин",
+      text: "Чемпион мира по шахматам",
+      link: "/",
+      image: {
+        sources: [
+          {
+            srcset: "./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x",
+            type: "image/png",
+          }
+        ],
+        img: {
+          src: "./assets/images/avatar.png",
+          srcset: "./assets/images/avatar@2x.png 2x",
+          alt: "Александр Алехин",
+        }
+      }
+    },
+    {
+      title: "Арон Нимцович",
+      text: "Чемпион мира по шахматам",
+      link: "/",
+      image: {
+        sources: [
+          {
+            srcset: "./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x",
+            type: "image/png",
+          }
+        ],
+        img: {
+          src: "./assets/images/avatar.png",
+          srcset: "./assets/images/avatar@2x.png 2x",
+          alt: "Арон Нимцович",
+        }
+      }
+    },
+    {
+      title: "Рихард Рети",
+      text: "Чемпион мира по шахматам",
+      link: "/",
+      image: {
+        sources: [
+          {
+            srcset: "./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x",
+            type: "image/png",
+          }
+        ],
+        img: {
+          src: "./assets/images/avatar.png",
+          srcset: "./assets/images/avatar@2x.png 2x",
+          alt: "Рихард Рети",
+        }
+      }
+    },
+    {
+      title: "Остап Бендер",
+      text: "Чемпион мира по шахматам",
+      link: "/",
+      image: {
+        sources: [
+          {
+            srcset: "./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x",
+            type: "image/png",
+          }
+        ],
+        img: {
+          src: "./assets/images/avatar.png",
+          srcset: "./assets/images/avatar@2x.png 2x",
+          alt: "Остап Бендер",
+        }
+      }
+    }
+  ];
+
+
+mixin section-3()
+  section.section-3
+    div.container
+      div.sectionContainer
+        h2.__title.big-margin
+          span.innerText 
+            | Участники турнира
+      div.chessWrapper
+        div.chessSlider
+          each item in sliderContent
+            div.__item
+              div.chessCard
+                div.__avatar 
+                  div.avatarInner
+                    +picture(item.image.sources, item.image.img)
+                div.__title #{item.title}
+                div.__text #{item.text}
+                a.buttonLink(href = item.link) 
+                  span.__inner Подробнее

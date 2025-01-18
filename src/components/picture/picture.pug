@@ -1,0 +1,5 @@
+mixin picture(sources, img, className)
+  picture.picture(class= className)
+    each item in sources
+      source(srcset= item.srcset, type= item.type)
+    img(src= img.src, srcset= img.srcset, alt= img.alt)

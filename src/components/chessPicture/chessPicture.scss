@@ -1,0 +1,116 @@
+@use "../../scss/variables.scss" as *;
+
+.chessPicture {
+  position: relative;
+  width: 474px;
+  user-select: none;
+  pointer-events: none;
+  &__inner {
+    padding-top: 111.18%;
+  }
+  &__abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-light;
+  }
+}
+.chessPicture-overlay {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-burn;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-figure {
+  position: absolute;
+  z-index: 7;
+  bottom: 0;
+  left: 13.29%;
+  width: 33.15%;
+  height: 32.68%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-vector-1 {
+  position: absolute;
+  z-index: 6;
+  bottom: 2.5%;
+  left: -3.29%;
+  width: 52.39%;
+  height: 41.23%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-hand {
+  position: absolute;
+  z-index: 5;
+  bottom: -18.25%;
+  right: -1.02%;
+  width: 60%;
+  height: 55.41%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-man {
+  position: absolute;
+  z-index: 4;
+  top: 16.72%;
+  left: 15.9%;
+  width: 71.44%;
+  height: 64.57%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-vector-2 {
+  position: absolute;
+  z-index: 3;
+  top: -5.27%;
+  left: -5.8%;
+  width: 111.6%;
+  height: 65.23%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-money {
+  position: absolute;
+  z-index: 2;
+  top: 4.34%;
+  right: 0;
+  width: 25.65%;
+  height: 45.65%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.chessPicture-bg {
+  position: absolute;
+  z-index: 1;
+  top: 7.45%;
+  left: 4.71%;
+  width: 85.56%;
+  height: 83.01%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

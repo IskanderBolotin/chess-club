@@ -1,0 +1,10 @@
+mixin inputFile()
+  div.fileWrapper#file-wrapper
+    input.visually-hidden(type="file", name="file", id="file", multiple, accept="image/jpeg, image/png")
+    label.inputFile(for="file", id="file-label-main")
+      span.__icon
+        svg
+          use(xlink:href="./icons/sprite.svg#load-file")
+      span.__text 
+        | Загрузить фотографии. Максимальный вес 10 мегабайт. <br />
+        | Расширение jpeg, png

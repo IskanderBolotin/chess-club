@@ -1,0 +1,17 @@
+@use "./default.scss";
+@use "../components/style.scss";
+
+.sections {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &__item {
+    margin: 0 0 200px;
+    &.small {
+      margin-bottom: 80px;
+    }
+    &.middle {
+      margin-bottom: 139px;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+-
+  var chessImages = [
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-bg.png 1x, ./assets/images/chessPicture/chessPicture-bg@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-bg.png",
+        srcset: "./assets/images/chessPicture/chessPicture-bg@2x.png 2x",
+        alt: "chessPicture-bg"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-figure.png 1x, ./assets/images/chessPicture/chessPicture-figure@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-figure.png",
+        srcset: "./assets/images/chessPicture/chessPicture-figure@2x.png 2x",
+        alt: "chessPicture-figure"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-hand.png 1x, ./assets/images/chessPicture/chessPicture-hand@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-hand.png",
+        srcset: "./assets/images/chessPicture/chessPicture-hand@2x.png 2x",
+        alt: "chessPicture-hand"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-man.png 1x, ./assets/images/chessPicture/chessPicture-man@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-man.png",
+        srcset: "./assets/images/chessPicture/chessPicture-man@2x.png 2x",
+        alt: "chessPicture-man"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-money.png 1x, ./assets/images/chessPicture/chessPicture-money@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-money.png",
+        srcset: "./assets/images/chessPicture/chessPicture-money@2x.png 2x",
+        alt: "chessPicture-money"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-overlay.png 1x, ./assets/images/chessPicture/chessPicture-overlay@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-overlay.png",
+        srcset: "./assets/images/chessPicture/chessPicture-overlay@2x.png 2x",
+        alt: "chessPicture-overlay"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-vector-1.png 1x, ./assets/images/chessPicture/chessPicture-vector-1@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-vector-1.png",
+        srcset: "./assets/images/chessPicture/chessPicture-vector-1@2x.png 2x",
+        alt: "chessPicture-vector-1"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chessPicture/chessPicture-vector-2.png 1x, ./assets/images/chessPicture/chessPicture-vector-2@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chessPicture/chessPicture-vector-2.png",
+        srcset: "./assets/images/chessPicture/chessPicture-vector-2@2x.png 2x",
+        alt: "chessPicture-vector-2"
+      }
+    },
+  ]
+
+mixin chessPicture()
+  div.chessPicture
+    div.__inner
+    div.__abs
+      +picture(chessImages[0].sources, chessImages[0].img, "chessPicture-bg")
+      +picture(chessImages[4].sources, chessImages[4].img, "chessPicture-money")
+      +picture(chessImages[7].sources, chessImages[7].img, "chessPicture-vector-2")
+      +picture(chessImages[3].sources, chessImages[3].img, "chessPicture-man")
+      +picture(chessImages[2].sources, chessImages[2].img, "chessPicture-hand")
+      +picture(chessImages[6].sources, chessImages[6].img, "chessPicture-vector-1")
+      +picture(chessImages[1].sources, chessImages[1].img, "chessPicture-figure")
+      +picture(chessImages[5].sources, chessImages[5].img, "chessPicture-overlay")

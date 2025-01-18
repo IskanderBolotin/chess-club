@@ -1,0 +1,9 @@
+mixin button(text, isPrimary = false, isLink = false, className)
+  if isLink
+    a.button(class={"primary": isPrimary})&attributes(attributes)
+      span.__inner
+        | #{text}
+  else
+    button.button(class={"primary": isPrimary})&attributes(attributes)
+      span.__inner
+        | #{text}

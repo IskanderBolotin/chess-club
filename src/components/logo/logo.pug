@@ -1,0 +1,9 @@
+mixin logo()
+  a(href="/").logo
+    span.figures
+      - for (var x = 0; x < 4; x++)
+        span.__icon
+          svg
+            use(xlink:href="./icons/sprite.svg#logo-figure")  
+    span.text
+      | Клуб <br /> четырех коней

@@ -1,0 +1,84 @@
+
+- 
+  var gridContent = [
+    {
+      text: "Строительство железнодорожной магистрали Москва-Васюки",
+    },
+    {
+      text: "Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов",
+    },
+    {
+      text: "Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет",
+    },
+    {
+      text: "Строительство дворца для турнира",
+    },
+    {
+      text: "Размещение гаражей для гостевого автотранспорта",
+    },
+    {
+      text: "Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов",
+    },
+    {
+      text: "Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн",
+    }
+  ];
+
+  var planeImage = {
+    sources: [
+      {
+        srcset: "./assets/images/plane.png 1x, ./assets/images/plane@2x.png 2x",
+        type: "image/png"
+      }
+    ],
+    img: {
+      src: "./assets/images/plane.png",
+      srcset: "./assets/images/plane@2x.png 2x",
+      alt: "plane"
+    }
+  };
+
+  var stampImage = {
+    sources: [
+      {
+        srcset: "./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x",
+        type: "image/png"
+      }
+    ],
+    img: {
+      src: "./assets/images/stamp.png",
+      srcset: "./assets/images/stamp@2x.png 2x",
+      alt: "stamp"
+    }
+  };
+
+  var stampBgImage = {
+    sources: [
+      {
+        srcset: "./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x",
+        type: "image/png"
+      }
+    ],
+    img: {
+      src: "./assets/images/stamp-bg.png",
+      srcset: "./assets/images/stamp-bg@2x.png 2x",
+      alt: "stamp-bg"
+    }
+  };
+
+mixin section-2()
+  section.section-2
+    div.container
+      div.sectionContainer
+        h2.__title 
+          span.innerText 
+            | Этапы преображения Васюков #[a.__link(href="/") Будущие источники обогащения васюкинцев]
+        div.sectionGrid
+          each item in gridContent
+            div.__item 
+              div.__inner
+                +picture(stampImage.sources, stampImage.img, "stamp")
+                +picture(stampBgImage.sources, stampBgImage.img, "stamp-bg")
+                p.__text 
+                  | !{item.text}
+          +picture(planeImage.sources, planeImage.img, "plane")

@@ -1,0 +1,138 @@
+-
+  var images = [
+    {
+      sources: [
+        {
+          srcset: "./assets/images/background.png 1x, ./assets/images/background@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/background.png",
+        srcset: "./assets/images/background@2x.png 2x",
+        alt: "background"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/path.png 1x, ./assets/images/path@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/path.png",
+        srcset: "./assets/images/path@2x.png 2x",
+        alt: "path"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/city.png 1x, ./assets/images/city@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/city.png",
+        srcset: "./assets/images/city@2x.png 2x",
+        alt: "city"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chess-1.png 1x, ./assets/images/chess-1@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chess-1.png",
+        srcset: "./assets/images/chess-1@2x.png 2x",
+        alt: "chess-1"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chess-2.png 1x, ./assets/images/chess-2@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chess-2.png",
+        srcset: "./assets/images/chess-2@2x.png 2x",
+        alt: "chess-2"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chess-3.png 1x, ./assets/images/chess-3@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chess-3.png",
+        srcset: "./assets/images/chess-3@2x.png 2x",
+        alt: "chess-3"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/chess-4.png 1x, ./assets/images/chess-4@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/chess-4.png",
+        srcset: "./assets/images/chess-4@2x.png 2x",
+        alt: "chess-4"
+      }
+    },
+    {
+      sources: [
+        {
+          srcset: "./assets/images/around-text.png 1x, ./assets/images/around-text@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/around-text.png",
+        srcset: "./assets/images/around-text@2x.png 2x",
+        alt: "around-text"
+      }
+    },
+  ]
+
+mixin mainBanner()
+  div.banner
+    div.slices
+      div.around
+        div.__inner
+          div.__image
+            +picture(images[7].sources, images[7].img, "around-text")
+      +picture(images[6].sources, images[6].img, "chess-4")
+      +picture(images[5].sources, images[5].img, "chess-3")
+      +picture(images[2].sources, images[2].img, "city")
+      +picture(images[1].sources, images[1].img, "path")
+    +picture(images[0].sources, images[0].img, "background")
+    div.chess
+      +picture(images[3].sources, images[3].img, "chess-1")
+      +picture(images[4].sources, images[4].img, "chess-2")
+    div.container
+      div.content
+        h1.__title  
+          span.__left Превратите уездный город
+          span.__center в столицу
+          span.__center.paddingLeft земного шара  
+        p.__text
+          | Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
+        div.buttons
+          div.__item
+            +button("Поддержать шахматную мысль", true, true)(href="#")
+          div.__item
+            +button("Подробнее о турнире", false, true)(href="#")
+    
+    

@@ -1,0 +1,20 @@
+extends ../layouts/mainLayout
+
+block header
+  +header()
+block main 
+  ul.sections   
+    li.__item.small
+      +mainBanner()
+      +runningLine()
+    li.__item
+      +section-1()
+    li.__item
+      +section-2()
+    li.__item.middle
+      +section-3()
+      
+block footer
+  +runningLine()
+  +footer()
+    

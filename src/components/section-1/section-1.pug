@@ -1,0 +1,70 @@
+
+- 
+  var imagesSection = [
+    {
+      sources: [
+        {
+          srcset: "./assets/images/tournament.png 1x, ./assets/images/tournament@2x.png 2x",
+          type: "image/png"
+        }
+      ],
+      img: {
+        src: "./assets/images/tournament.png",
+        srcset: "./assets/images/tournament@2x.png 2x",
+        alt: "tournament"
+      }
+    },
+  ];
+
+  var tableData = [
+    {
+      title: "Место проведения:",
+      value: "Клуб «Картонажник»"
+    },
+    {
+      title: "Дата и время мероприятия:",
+      value: "22 июня 1927 г. в 18:00"
+    },
+    {
+      title: "Стоимость входных билетов:",
+      value: "20 коп."
+    },
+    {
+      title: "Плата за игру:",
+      value: "50 коп."
+    },
+    {
+      title: "Взнос на телеграммы:",
+      value: "<span class='line'>100 руб.</span>   21 руб. 16 коп."
+    },
+  ]
+
+mixin section-1()
+  section.section-1
+    div.container
+      div.topInfo
+        div.__inner
+          div.__item.left
+            p.__text
+              span.__title Чтобы поддержать Международный васюкинский турнир 
+              span.__title посетите лекцию на тему: #[span.hl «Плодотворная дебютная идея»]
+          div.__item.right
+            +picture(imagesSection[0].sources, imagesSection[0].img, "tournament")
+      div.bottomInfo
+        div.__inner
+          div.__item.left
+            div.cheessImage
+              +chessPicture()
+          div.__item.right
+            div.__content
+              p.__text
+                span.__title и Сеанс #[span.hl одновременной игры в шахматы на 160 досках] гроссмейстера О. Бендера
+              div.chessTable
+                each item in tableData
+                  div.__inner
+                    div.__item.left
+                      div.__title !{item.title}
+                    div.__item.right
+                      div.__value !{item.value}
+              a.__link(href="")
+                | По всем вопросам обращаться в администрацию к К. Михельсону 

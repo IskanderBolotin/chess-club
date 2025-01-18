@@ -1,0 +1,45 @@
+@use "../../scss/variables.scss" as *;
+
+.rinningLine {
+  width: 100%;
+  background-color: $color-warning;
+  padding: 18px 0;
+  color: $color-light;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 110%;
+  text-transform: uppercase;
+  overflow: hidden;
+  &__main {
+    display: inline-flex;
+    animation: runningLine 30s linear 0s infinite;
+    margin: 0 -6px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 6px;
+    margin: 0 -6px;
+  }
+  &__item {
+    white-space: nowrap;
+    padding: 0 6px;
+  }
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-light;
+}
+
+@keyframes runningLine {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

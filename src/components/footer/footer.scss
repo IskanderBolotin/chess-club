@@ -1,0 +1,12 @@
+@use "../../scss/variables.scss" as *;
+
+.footer {
+  padding: 40px 0 72px;
+  background-color: $color-background;
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    opacity: 0.6;
+  }
+}
