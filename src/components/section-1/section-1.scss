@@ -2,22 +2,56 @@
 
 .topInfo {
   margin: 0 0 64px;
+  @media (max-width: $media-mobile) {
+    margin-bottom: 54px;
+  }
+  &__empty {
+    padding-top: 63.45%;
+  }
+  &__picture {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(100% * 4 / 12);
+    padding: 0 10px;
+    transform: translateY(-50%);
+    @media (max-width: $media-mobile) {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: auto;
+      padding: 0;
+      margin: 24px auto 24.4px;
+      max-width: 100%;
+      transform: none;
+    }
+  }
   &__inner {
     display: flex;
     align-items: center;
+    position: relative;
     margin: 0 -10px;
   }
   &__item {
+    padding: 0 10px;
     &.left {
       width: calc(100% * 8 / 12);
+      @media (max-width: $media-mobile) {
+        width: 100%;
+      }
     }
     &.right {
       width: calc(100% * 4 / 12);
+      @media (max-width: $media-mobile) {
+        display: none;
+      }
     }
-    padding: 0 10px;
   }
   &__text {
     padding: 0 44px 0 0;
+    @media (max-width: $media-mobile) {
+      padding-right: 0;
+    }
   }
   &__title {
     font-family: "Merriweather", serif;
@@ -25,6 +59,16 @@
     font-size: 36px;
     line-height: 135%;
     text-transform: uppercase;
+    @media (max-width: $media-mobile) {
+      display: block;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    @media (max-width: $media-mobile-xs) {
+      font-size: 24px;
+      line-height: 1.11;
+    }
   }
   .hl {
     color: $color-warning;
@@ -33,10 +77,15 @@
 }
 .tournament {
   width: 100%;
+  @media (max-width: $media-mobile) {
+    max-width: 335px;
+    margin: 0 auto;
+  }
 }
 .bottomInfo {
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -10px;
   }
   &__item {
@@ -45,9 +94,16 @@
     padding: 0 10px;
     &.left {
       width: calc(100% * 5 / 12);
+      @media (max-width: $media-mobile) {
+        width: 100%;
+        margin-bottom: 34px;
+      }
     }
     &.right {
       width: calc(100% * 7 / 12);
+      @media (max-width: $media-mobile) {
+        width: 100%;
+      }
     }
   }
   &__content {
@@ -58,6 +114,9 @@
   &__text {
     padding: 0;
     margin-bottom: 60px;
+    @media (max-width: $media-mobile) {
+      margin-bottom: 44px;
+    }
   }
   &__title {
     font-family: "Merriweather", serif;
@@ -65,6 +124,16 @@
     font-size: 36px;
     line-height: 135%;
     text-transform: uppercase;
+    @media (max-width: $media-mobile) {
+      display: block;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    @media (max-width: $media-mobile-xs) {
+      font-size: 24px;
+      line-height: 1.11;
+    }
   }
   .hl {
     color: $color-warning;
@@ -75,19 +144,55 @@
     font-size: 20px;
     line-height: 120%;
     color: $color-link;
-    &:hover {
-      text-decoration: underline;
+    @media (min-width: $media-mobile-min) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: $media-mobile) {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
   .cheessImage {
     padding-right: 24px;
+    @media (max-width: $media-mobile) {
+      padding-right: 0;
+    }
   }
 }
 
 .chessTable {
   margin-bottom: 48px;
+  @media (max-width: $media-mobile) {
+    margin-bottom: 40px;
+  }
   &__inner {
     display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $media-mobile) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid $color-border;
+      &:nth-child(4) {
+        display: block;
+        .chessTable__item,
+        .chessTable__title,
+        .chessTable__value {
+          display: inline;
+        }
+        .chessTable__title {
+          margin-right: 9px;
+        }
+      }
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
     &:first-child {
       .chessTable__item {
         &.left {
@@ -103,6 +208,9 @@
         border-bottom: 0;
         &.left {
           padding-bottom: 0;
+          @media (max-width: $media-mobile) {
+            padding-bottom: 12px;
+          }
         }
         &.right {
           padding-bottom: 0;
@@ -141,6 +249,11 @@
       padding: 15px 15px 15px 0;
       width: 43.46%;
       position: relative;
+      @media (max-width: $media-mobile) {
+        width: 100%;
+        border-bottom: 0;
+        padding: 0px 0 12px;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -149,11 +262,19 @@
         width: 2px;
         height: calc(100% + 2px);
         background-color: $color-border;
+        @media (max-width: $media-mobile) {
+          display: none;
+        }
       }
     }
     &.right {
       width: 56.54%;
       padding: 15px;
+      @media (max-width: $media-mobile) {
+        width: 100%;
+        border-bottom: 0;
+        padding: 0px;
+      }
     }
   }
 }

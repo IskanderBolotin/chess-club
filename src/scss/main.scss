@@ -1,3 +1,4 @@
+@use "./variables.scss" as *;
 @use "./default.scss";
 @use "../components/style.scss";
 
@@ -7,11 +8,20 @@
   list-style: none;
   &__item {
     margin: 0 0 200px;
+    @media (max-width: $media-mobile) {
+      margin-bottom: 121px;
+    }
     &.small {
       margin-bottom: 80px;
+      @media (max-width: $media-mobile) {
+        margin-bottom: 48px;
+      }
     }
     &.middle {
       margin-bottom: 139px;
+      @media (max-width: $media-mobile) {
+        margin-bottom: 101px;
+      }
     }
   }
 }

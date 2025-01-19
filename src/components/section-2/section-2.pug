@@ -73,12 +73,23 @@ mixin section-2()
         h2.__title 
           span.innerText 
             | Этапы преображения Васюков #[a.__link(href="/") Будущие источники обогащения васюкинцев]
-        div.sectionGrid
-          each item in gridContent
-            div.__item 
-              div.__inner
-                +picture(stampImage.sources, stampImage.img, "stamp")
-                +picture(stampBgImage.sources, stampBgImage.img, "stamp-bg")
-                p.__text 
-                  | !{item.text}
-          +picture(planeImage.sources, planeImage.img, "plane")
+        div.gridWrapper
+          div.sectionGrid
+            each item in gridContent
+              div.__item 
+                div.__inner
+                  +picture(stampImage.sources, stampImage.img, "stamp")
+                  +picture(stampBgImage.sources, stampBgImage.img, "stamp-bg")
+                  p.__text 
+                    | !{item.text}
+            +picture(planeImage.sources, planeImage.img, "plane")
+          div.__controls
+            div.controls
+              div.control-arrow
+                +aroundButton(true)(class="slider-prev")
+              div.control-counter
+                span.slider-counter.slider-current-count 3
+                span.slider-separator /
+                span.slider-counter.slider-all-count 6
+              div.control-arrow
+                +aroundButton()(class="slider-next")

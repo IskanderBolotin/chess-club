@@ -13,6 +13,11 @@
     height: 65px;
     right: 0;
     bottom: calc(100% + 60px);
+    @media (max-width: $media-mobile) {
+      position: static;
+      height: 36px;
+      margin-top: 40px;
+    }
   }
 }
 .controls {
@@ -25,9 +30,16 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
+  display: flex;
+  @media (max-width: $media-mobile) {
+    margin: 0 11px;
+  }
 }
 .slider-separator {
   padding: 0 4px;
+}
+.slider-counter {
+  width: 11px;
 }
 .slider-separator,
 .slider-all-count {
@@ -39,7 +51,12 @@
   transition: .25s linear transform;
   &__item {
     min-width: calc(100% / 3);
+    width: calc(100% / 3);
     padding: 0 10px;
+    @media (max-width: $media-mobile) {
+      min-width: 100%;
+      width: 100%;
+    }
   }
 }
 .chessCard {
@@ -49,17 +66,26 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  padding: 0 37px;
   &__avatar {
-    width: 100%;
+    width: 320px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
     user-select: none;
+    @media (max-width: $media-mobile) {
+      width: 244px;
+      margin-bottom: 29px;
+    }
   }
   &__title {
     font-weight: 600;
     font-size: 24px;
     line-height: 120%;
     margin-bottom: 5px;
+    @media (max-width: $media-mobile) {
+      margin-bottom: 8px;
+    }
   }
   &__text {
     font-weight: 400;
@@ -95,9 +121,11 @@
   transition: 0.25s linear background-color, 0.25s linear color;
   border-radius: 62px;
   padding: 8px 12px;
-  &:hover {
-    background-color: $color-link;
-    color: $color-light;
+  @media (min-width: $media-mobile-min) {
+    &:hover {
+      background-color: $color-link;
+      color: $color-light;
+    }
   }
   &__inner {
     display: flex;

@@ -1,17 +1,39 @@
 @use "../../scss/variables.scss" as *;
-
+.gridWrapper {
+  &__controls {
+    display: none;
+    @media (max-width: $media-mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 28px;
+      height: 36px;
+    }
+  }
+  @media (max-width: $media-mobile) {
+    padding-top: 126px;
+    overflow: hidden;
+  }
+}
 .sectionGrid {
   position: relative;
   counter-reset: grid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
+  @media (max-width: $media-mobile) {
+    gap: 0 40px;
+    grid-template-columns: repeat(5, 100%);
+  }
   &__inner {
     overflow: hidden;
     counter-increment: grid;
     height: 100%;
     padding: 20px 20px 20px 72px;
     position: relative;
+    @media (max-width: $media-mobile) {
+      padding: 0 24px 0 72px;
+    }
     &::before {
       content: counter(grid);
       display: flex;
@@ -38,14 +60,101 @@
     font-size: 20px;
     line-height: 120%;
     max-width: 446px;
+    @media (max-width: $media-mobile) {
+      font-size: 18px;
+      line-height: 22px;
+      width: 100%;
+    }
   }
   &__item {
+    &:nth-child(1) {
+      @media (max-width: $media-mobile) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        .sectionGrid__inner {
+          padding-top: 62px;
+          &::before {
+            top: 62px;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      @media (max-width: $media-mobile) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        .sectionGrid__inner {
+          padding-top: 28px;
+          padding-bottom: 34px;
+          &::before {
+            top: 28px;
+          }
+        }
+      }
+    }
     &:nth-child(3) {
       grid-column: 3 / 3;
       grid-row: 1 / 3;
+      @media (max-width: $media-mobile) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        .sectionGrid__inner {
+          padding-top: 62px;
+          &::before {
+            top: 62px;
+          }
+        }
+      }
+    }
+    &:nth-child(4) {
+      @media (max-width: $media-mobile) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        .sectionGrid__inner {
+          padding-top: 62px;
+          &::before {
+            top: 62px;
+          }
+        }
+      }
+    }
+    &:nth-child(5) {
+      @media (max-width: $media-mobile) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        .sectionGrid__inner {
+          padding-top: 28px;
+          padding-bottom: 34px;
+          &::before {
+            top: 28px;
+          }
+        }
+      }
+    }
+    &:nth-child(6) {
+      @media (max-width: $media-mobile) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+        .sectionGrid__inner {
+          padding-top: 62px;
+          &::before {
+            top: 62px;
+          }
+        }
+      }
     }
     &:nth-child(7) {
       grid-column: 2 / 4;
+      @media (max-width: $media-mobile) {
+        grid-column: 5 / 6;
+        grid-row: 1 / 3;
+        .sectionGrid__inner {
+          padding-top: 62px;
+          &::before {
+            top: 62px;
+          }
+        }
+      }
     }
   }
   .plane {
@@ -53,6 +162,13 @@
     right: -5.11%;
     bottom: -2px;
     width: 32.78%;
+    @media (max-width: $media-mobile) {
+      max-width: 100%;
+      width: 335px;
+      left: 52.5%;
+      transform: translate(-50%, 33.5%) rotate(-4deg);
+      bottom: 100%;
+    }
   }
 }
 .stamp,

@@ -12,8 +12,14 @@
   cursor: pointer;
   text-decoration: none;
   transition: .25s linear background, .25s linear color;
-  &:hover {
-    background-color: $color-extra;
+  @media (max-width: $media-mobile) {
+    width: 36px;
+    height: 36px;
+  }
+  @media (min-width: $media-mobile-min) {
+    &:hover {
+      background-color: $color-extra;
+    }
   }
   &:disabled {
     background-color: $color-disabled;

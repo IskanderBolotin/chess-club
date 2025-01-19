@@ -8,7 +8,7 @@
   </head>
   <body> 
     <header class="header">
-      <div class="container"><a class="logo" href="/"><span class="figures"><span class="figures__icon">
+      <div class="container"><a class="logo" href="#"><span class="figures"><span class="figures__icon">
               <svg>
                 <use xlink:href="./icons/sprite.svg#logo-figure"> </use>
               </svg></span><span class="figures__icon">
@@ -106,12 +106,16 @@
             <div class="topInfo">
               <div class="topInfo__inner">
                 <div class="topInfo__item left">
-                  <p class="topInfo__text"><span class="topInfo__title">Чтобы поддержать Международный васюкинский турнир </span><span class="topInfo__title">посетите лекцию на тему: <span class="hl">«Плодотворная дебютная идея»</span></span></p>
+                  <div class="topInfo__text"><span class="topInfo__title">Чтобы поддержать Международный васюкинский турнир </span>
+                    <div class="topInfo__picture">
+                      <picture class="picture tournament">
+                        <source srcset="./assets/images/tournament.png 1x, ./assets/images/tournament@2x.png 2x" type="image/png"/><img src="./assets/images/tournament.png" srcset="./assets/images/tournament@2x.png 2x" alt="tournament"/>
+                      </picture>
+                    </div><span class="topInfo__title">посетите лекцию на тему: <span class="hl">«Плодотворная дебютная идея»</span></span>
+                  </div>
                 </div>
                 <div class="topInfo__item right">
-                  <picture class="picture tournament">
-                    <source srcset="./assets/images/tournament.png 1x, ./assets/images/tournament@2x.png 2x" type="image/png"/><img src="./assets/images/tournament.png" srcset="./assets/images/tournament@2x.png 2x" alt="tournament"/>
-                  </picture>
+                  <div class="topInfo__empty"></div>
                 </div>
               </div>
             </div>
@@ -208,87 +212,106 @@
             <div class="sectionContainer">
               <h2 class="sectionContainer__title"> <span class="innerText">
                    Этапы преображения Васюков <a class="innerText__link" href="/">Будущие источники обогащения васюкинцев</a></span></h2>
-              <div class="sectionGrid">
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Строительство железнодорожной магистрали Москва-Васюки</p>
+              <div class="gridWrapper">
+                <div class="sectionGrid">
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Строительство железнодорожной магистрали Москва-Васюки</p>
+                    </div>
+                  </div>
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+                    </div>
+                  </div>
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+                    </div>
+                  </div>
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Строительство дворца для турнира</p>
+                    </div>
+                  </div>
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Размещение гаражей для гостевого автотранспорта</p>
+                    </div>
+                  </div>
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
+                    </div>
+                  </div>
+                  <div class="sectionGrid__item"> 
+                    <div class="sectionGrid__inner">
+                      <picture class="picture stamp">
+                        <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
+                      </picture>
+                      <picture class="picture stamp-bg">
+                        <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
+                      </picture>
+                      <p class="sectionGrid__text"> Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
+                    </div>
+                  </div>
+                  <picture class="picture plane">
+                    <source srcset="./assets/images/plane.png 1x, ./assets/images/plane@2x.png 2x" type="image/png"/><img src="./assets/images/plane.png" srcset="./assets/images/plane@2x.png 2x" alt="plane"/>
+                  </picture>
+                </div>
+                <div class="gridWrapper__controls">
+                  <div class="controls">
+                    <div class="control-arrow">
+                      <button class="aroundButton slider-prev"><span class="aroundButton__inner">
+                          <svg>
+                            <use xlink:href="./icons/sprite.svg#arrow-left"> </use>
+                          </svg></span></button>
+                    </div>
+                    <div class="control-counter"><span class="slider-counter slider-current-count">3</span><span class="slider-separator">/</span><span class="slider-counter slider-all-count">6</span></div>
+                    <div class="control-arrow">
+                      <button class="aroundButton slider-next"><span class="aroundButton__inner">
+                          <svg>
+                            <use xlink:href="./icons/sprite.svg#arrow-right"></use>
+                          </svg></span></button>
+                    </div>
                   </div>
                 </div>
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
-                  </div>
-                </div>
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
-                  </div>
-                </div>
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Строительство дворца для турнира</p>
-                  </div>
-                </div>
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Размещение гаражей для гостевого автотранспорта</p>
-                  </div>
-                </div>
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
-                  </div>
-                </div>
-                <div class="sectionGrid__item"> 
-                  <div class="sectionGrid__inner">
-                    <picture class="picture stamp">
-                      <source srcset="./assets/images/stamp.png 1x, ./assets/images/stamp@2x.png 2x" type="image/png"/><img src="./assets/images/stamp.png" srcset="./assets/images/stamp@2x.png 2x" alt="stamp"/>
-                    </picture>
-                    <picture class="picture stamp-bg">
-                      <source srcset="./assets/images/stamp-bg.png 1x, ./assets/images/stamp-bg@2x.png 2x" type="image/png"/><img src="./assets/images/stamp-bg.png" srcset="./assets/images/stamp-bg@2x.png 2x" alt="stamp-bg"/>
-                    </picture>
-                    <p class="sectionGrid__text"> Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
-                  </div>
-                </div>
-                <picture class="picture plane">
-                  <source srcset="./assets/images/plane.png 1x, ./assets/images/plane@2x.png 2x" type="image/png"/><img src="./assets/images/plane.png" srcset="./assets/images/plane@2x.png 2x" alt="plane"/>
-                </picture>
               </div>
             </div>
           </div>
@@ -392,7 +415,7 @@
                           <use xlink:href="./icons/sprite.svg#arrow-left"> </use>
                         </svg></span></button>
                   </div>
-                  <div class="control-counter"><span class="slider-current-count">3</span><span class="slider-separator">/</span><span class="slider-all-count">6</span></div>
+                  <div class="control-counter"><span class="slider-counter slider-current-count">3</span><span class="slider-separator">/</span><span class="slider-counter slider-all-count">6</span></div>
                   <div class="control-arrow">
                     <button class="aroundButton slider-next"><span class="aroundButton__inner">
                         <svg>

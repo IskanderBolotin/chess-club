@@ -19,17 +19,21 @@
     background-color: $color-light;
     border: 0;
   }
-  &:hover {
-    background-color: $color-secondary;
-    color: $color-light;
+  @media (min-width: $media-mobile-min) {
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-light;
+    }
   }
   &.primary {
     background-color: $color-secondary;
     color: $color-light;
-    &:hover {
-      background-color: $color-extra;
-      border-color: $color-extra;
-      color: $color-secondary;
+    @media (min-width: $media-mobile-min) {
+      &:hover {
+        background-color: $color-extra;
+        border-color: $color-extra;
+        color: $color-secondary;
+      }
     }
   }
   &__inner {
