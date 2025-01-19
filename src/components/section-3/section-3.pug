@@ -119,15 +119,26 @@ mixin section-3()
         h2.__title.big-margin
           span.innerText 
             | Участники турнира
-      div.chessWrapper
-        div.chessSlider
-          each item in sliderContent
-            div.__item
-              div.chessCard
-                div.__avatar 
-                  div.avatarInner
-                    +picture(item.image.sources, item.image.img)
-                div.__title #{item.title}
-                div.__text #{item.text}
-                a.buttonLink(href = item.link) 
-                  span.__inner Подробнее
+      div.sliderContainer#chess-slider
+        div.__wrapper
+          div.slider
+            each item in sliderContent
+              div.__item
+                div.chessCard
+                  div.__avatar
+                    div.avatarInner
+                      +picture(item.image.sources, item.image.img)(draggable="false")
+                  div.__title #{item.title}
+                  div.__text #{item.text}
+                  a.buttonLink(href = item.link) 
+                    span.__inner Подробнее
+        div.__controls
+          div.controls
+            div.control-arrow
+              +aroundButton(true)(class="slider-prev")
+            div.control-counter
+              span.slider-current-count 3
+              span.slider-separator /
+              span.slider-all-count 6
+            div.control-arrow
+              +aroundButton()(class="slider-next")

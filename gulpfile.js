@@ -78,7 +78,7 @@ const spriteCreate = () => {
                           shorthex: false,
                         },
                         removeUselessStrokeAndFill: {
-                          stroke: true,
+                          stroke: false,
                           fill: true,
                         },
                       },

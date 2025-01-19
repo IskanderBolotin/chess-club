@@ -49,14 +49,13 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-button[disabled],
-input[type="search"],
-input[disabled] {
+input[type="search"] {
   border-radius: 0;
   background-image: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
+  appearance: none;
   -webkit-border-radius: 0px;
   font-family: inherit;
 }
@@ -68,6 +67,7 @@ input::-moz-focus-inner {
   background-color: transparent;
   box-shadow: none;
   -webkit-appearance: none;
+  appearance: none;
   -webkit-border-radius: 0px;
   font-family: inherit;
 }
@@ -104,12 +104,6 @@ textarea {
   -moz-appearance: none;
   appearance: none;
 }
-input[disabled],
-button[disabled],
-textarea[disabled] {
-  color: #7b818c !important;
-  opacity: 0.5 !important;
-}
 input[type="text"]::-ms-clear {
   display: none;
   width: 0;
@@ -133,6 +127,7 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 a {
   color: inherit;
@@ -165,7 +160,7 @@ a {
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-size: 54px;
-    line-height: 120%;
+    line-height: 65px;
     text-transform: uppercase;
     margin: 0 0 54px;
     max-width: 806px;
@@ -178,8 +173,8 @@ a {
         width: 280px;
         max-width: 100%;
         position: absolute;
-        bottom: 7%;
-        left: 106%;
+        bottom: 9%;
+        left: 107%;
         font-family: "Golos", sans-serif;
         font-weight: 400;
         font-size: 20px;

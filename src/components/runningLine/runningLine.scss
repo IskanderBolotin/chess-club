@@ -11,6 +11,12 @@
   line-height: 110%;
   text-transform: uppercase;
   overflow: hidden;
+  white-space: nowrap;
+  @media (max-width: $media-mobile) {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 0;
+  }
   &__main {
     display: inline-flex;
     animation: runningLine 30s linear 0s infinite;

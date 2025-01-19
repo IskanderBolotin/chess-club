@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   height: 36px;
+  @media (max-width: $media-mobile) {
+    height: 32px;
+  }
 }
 .figures {
   display: flex;
@@ -18,6 +21,13 @@
       height: 100%;
       fill: $color-logo;
     }
+    @media (max-width: $media-mobile) {
+      width: 20px;
+      height: 30px;
+    }
+  }
+  @media (max-width: $media-mobile) {
+    margin-right: 5px;
   }
 }
 .text {
@@ -29,4 +39,8 @@
   color: $color-logo;
   font-weight: 700;
   text-transform: uppercase;
+  @media (max-width: $media-mobile) {
+    font-size: 14.5px;
+    line-height: 16px;
+  }
 }

@@ -1,11 +1,42 @@
 @use "../../scss/variables.scss" as *;
 
-.chessWrapper {
-  overflow: hidden;
+.sliderContainer {
+  position: relative;
+  &__wrapper {
+    overflow: hidden;
+  }
+  &__controls {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    right: 0;
+    bottom: calc(100% + 60px);
+  }
 }
-.chessSlider {
+.controls {
+  display: flex;
+  align-items: center;
+}
+.control-counter {
+  min-width: 35px;
+  margin: 0 14px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
+.slider-separator {
+  padding: 0 4px;
+}
+.slider-separator,
+.slider-all-count {
+  opacity: 0.6;
+}
+.slider {
   display: flex;
   margin: 0 -10px;
+  transition: .25s linear transform;
   &__item {
     min-width: calc(100% / 3);
     padding: 0 10px;
@@ -22,6 +53,7 @@
   &__avatar {
     width: 100%;
     margin-bottom: 30px;
+    user-select: none;
   }
   &__title {
     font-weight: 600;

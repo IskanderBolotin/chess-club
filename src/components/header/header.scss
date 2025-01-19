@@ -8,4 +8,8 @@
   right: 0;
   top: 0;
   height: $header-height;
+  @media (max-width: $media-mobile) {
+    padding: 18px 0;
+    height: $header-mobile-height;
+  }
 }

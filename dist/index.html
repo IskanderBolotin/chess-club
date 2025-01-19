@@ -65,9 +65,9 @@
               <h1 class="content__title"> <span class="content__left">Превратите уездный город</span><span class="content__center">в столицу</span><span class="content__center paddingLeft">земного шара  </span></h1>
               <p class="content__text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
               <div class="buttons">
-                <div class="buttons__item"><a class="button primary" href="#"><span class="button__inner">Поддержать шахматную мысль</span></a>
+                <div class="buttons__item"><a class="button primary" href="#section-1"><span class="button__inner">Поддержать шахматную мысль</span></a>
                 </div>
-                <div class="buttons__item"><a class="button" href="#"><span class="button__inner">Подробнее о турнире</span></a>
+                <div class="buttons__item"><a class="button" href="#section-2"><span class="button__inner">Подробнее о турнире</span></a>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
         </div>
       </li>
       <li class="sections__item">
-        <section class="section-1">
+        <section class="section-1" id="section-1">
           <div class="container">
             <div class="topInfo">
               <div class="topInfo__inner">
@@ -203,7 +203,7 @@
         </section>
       </li>
       <li class="sections__item">
-        <section class="section-2">
+        <section class="section-2" id="section-2">
           <div class="container">
             <div class="sectionContainer">
               <h2 class="sectionContainer__title"> <span class="innerText">
@@ -301,84 +301,103 @@
               <h2 class="sectionContainer__title big-margin"><span class="innerText">
                    Участники турнира</span></h2>
             </div>
-            <div class="chessWrapper">
-              <div class="chessSlider">
-                <div class="chessSlider__item">
-                  <div class="chessCard">
-                    <div class="chessCard__avatar"> 
-                      <div class="avatarInner">
-                        <picture class="picture">
-                          <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Хозе-Рауль Капабланка"/>
-                        </picture>
+            <div class="sliderContainer" id="chess-slider">
+              <div class="sliderContainer__wrapper">
+                <div class="slider">
+                  <div class="slider__item">
+                    <div class="chessCard">
+                      <div class="chessCard__avatar">
+                        <div class="avatarInner">
+                          <picture class="picture">
+                            <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Хозе-Рауль Капабланка" draggable="false"/>
+                          </picture>
+                        </div>
                       </div>
+                      <div class="chessCard__title">Хозе-Рауль Капабланка</div>
+                      <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
                     </div>
-                    <div class="chessCard__title">Хозе-Рауль Капабланка</div>
-                    <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                  </div>
+                  <div class="slider__item">
+                    <div class="chessCard">
+                      <div class="chessCard__avatar">
+                        <div class="avatarInner">
+                          <picture class="picture">
+                            <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Эммануил Ласкер" draggable="false"/>
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="chessCard__title">Эммануил Ласкер</div>
+                      <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                    </div>
+                  </div>
+                  <div class="slider__item">
+                    <div class="chessCard">
+                      <div class="chessCard__avatar">
+                        <div class="avatarInner">
+                          <picture class="picture">
+                            <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Александр Алехин" draggable="false"/>
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="chessCard__title">Александр Алехин</div>
+                      <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                    </div>
+                  </div>
+                  <div class="slider__item">
+                    <div class="chessCard">
+                      <div class="chessCard__avatar">
+                        <div class="avatarInner">
+                          <picture class="picture">
+                            <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Арон Нимцович" draggable="false"/>
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="chessCard__title">Арон Нимцович</div>
+                      <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                    </div>
+                  </div>
+                  <div class="slider__item">
+                    <div class="chessCard">
+                      <div class="chessCard__avatar">
+                        <div class="avatarInner">
+                          <picture class="picture">
+                            <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Рихард Рети" draggable="false"/>
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="chessCard__title">Рихард Рети</div>
+                      <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                    </div>
+                  </div>
+                  <div class="slider__item">
+                    <div class="chessCard">
+                      <div class="chessCard__avatar">
+                        <div class="avatarInner">
+                          <picture class="picture">
+                            <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Остап Бендер" draggable="false"/>
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="chessCard__title">Остап Бендер</div>
+                      <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                    </div>
                   </div>
                 </div>
-                <div class="chessSlider__item">
-                  <div class="chessCard">
-                    <div class="chessCard__avatar"> 
-                      <div class="avatarInner">
-                        <picture class="picture">
-                          <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Эммануил Ласкер"/>
-                        </picture>
-                      </div>
-                    </div>
-                    <div class="chessCard__title">Эммануил Ласкер</div>
-                    <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+              </div>
+              <div class="sliderContainer__controls">
+                <div class="controls">
+                  <div class="control-arrow">
+                    <button class="aroundButton slider-prev"><span class="aroundButton__inner">
+                        <svg>
+                          <use xlink:href="./icons/sprite.svg#arrow-left"> </use>
+                        </svg></span></button>
                   </div>
-                </div>
-                <div class="chessSlider__item">
-                  <div class="chessCard">
-                    <div class="chessCard__avatar"> 
-                      <div class="avatarInner">
-                        <picture class="picture">
-                          <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Александр Алехин"/>
-                        </picture>
-                      </div>
-                    </div>
-                    <div class="chessCard__title">Александр Алехин</div>
-                    <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
-                  </div>
-                </div>
-                <div class="chessSlider__item">
-                  <div class="chessCard">
-                    <div class="chessCard__avatar"> 
-                      <div class="avatarInner">
-                        <picture class="picture">
-                          <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Арон Нимцович"/>
-                        </picture>
-                      </div>
-                    </div>
-                    <div class="chessCard__title">Арон Нимцович</div>
-                    <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
-                  </div>
-                </div>
-                <div class="chessSlider__item">
-                  <div class="chessCard">
-                    <div class="chessCard__avatar"> 
-                      <div class="avatarInner">
-                        <picture class="picture">
-                          <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Рихард Рети"/>
-                        </picture>
-                      </div>
-                    </div>
-                    <div class="chessCard__title">Рихард Рети</div>
-                    <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
-                  </div>
-                </div>
-                <div class="chessSlider__item">
-                  <div class="chessCard">
-                    <div class="chessCard__avatar"> 
-                      <div class="avatarInner">
-                        <picture class="picture">
-                          <source srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x" type="image/png"/><img src="./assets/images/avatar.png" srcset="./assets/images/avatar@2x.png 2x" alt="Остап Бендер"/>
-                        </picture>
-                      </div>
-                    </div>
-                    <div class="chessCard__title">Остап Бендер</div>
-                    <div class="chessCard__text">Чемпион мира по шахматам</div><a class="buttonLink" href="/"> <span class="buttonLink__inner">Подробнее</span></a>
+                  <div class="control-counter"><span class="slider-current-count">3</span><span class="slider-separator">/</span><span class="slider-all-count">6</span></div>
+                  <div class="control-arrow">
+                    <button class="aroundButton slider-next"><span class="aroundButton__inner">
+                        <svg>
+                          <use xlink:href="./icons/sprite.svg#arrow-right"></use>
+                        </svg></span></button>
                   </div>
                 </div>
               </div>

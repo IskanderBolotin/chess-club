@@ -1,0 +1,19 @@
+mixin aroundButton(isLeft = false, isLink = false)
+  if isLink
+    a.aroundButton&attributes(attributes)
+      span.__inner
+        if isLeft 
+          svg
+            use(xlink:href="./icons/sprite.svg#arrow-left")  
+        else
+          svg
+            use(xlink:href="./icons/sprite.svg#arrow-right") 
+  else
+    button.aroundButton&attributes(attributes)
+      span.__inner
+        if isLeft 
+          svg
+            use(xlink:href="./icons/sprite.svg#arrow-left")  
+        else
+          svg
+            use(xlink:href="./icons/sprite.svg#arrow-right")
