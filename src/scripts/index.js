@@ -183,6 +183,7 @@ function customSlider(sliderConfig) {
 document.addEventListener('DOMContentLoaded', () => {
   const chessSlider = document.querySelector("#chess-slider");
   const stepSlider = document.querySelector("#step-slider");
+  const animateElementList = document.querySelectorAll(".animate-element");
   const isMoble = window.innerWidth <= mediaMobile;
 
   if (isMoble) {
@@ -204,9 +205,29 @@ document.addEventListener('DOMContentLoaded', () => {
     slideViewCount: isMoble ? 1 : 3,
     currentValue: 0,
     isAuto: true,
+    isUseCounter: true,
   };
 
   const chessSliderInit = customSlider(chessSliderConfig);
 
   chessSliderInit();
+
+  try {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          element.classList.add("__animation");
+          observer.unobserve(element);
+        }
+      });
+    });
+  
+    animateElementList.forEach(i => {
+      observer.observe(i)
+    });
+  }
+  catch (e) {
+    console.log(e)
+  }
 });

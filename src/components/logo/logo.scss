@@ -15,6 +15,34 @@
   &__icon {
     width: 23px;
     height: 33px;
+    &:nth-child(1) {
+      &.animate-element {
+        &.__animation {
+          animation: chessUp .25s linear .25s;
+        }
+      }
+    }
+    &:nth-child(2) {
+      &.animate-element {
+        &.__animation {
+          animation: chessUp .25s linear .5s;
+        }
+      }
+    }
+    &:nth-child(3) {
+      &.animate-element {
+        &.__animation {
+          animation: chessUp .25s linear .75s;
+        }
+      }
+    }
+    &:nth-child(4) {
+      &.animate-element {
+        &.__animation {
+          animation: chessUp .25s linear 1s;
+        }
+      }
+    }
     svg {
       display: block;
       width: 100%;
@@ -26,6 +54,7 @@
       height: 30px;
     }
   }
+  
   @media (max-width: $media-mobile) {
     margin-right: 5px;
   }
@@ -42,5 +71,17 @@
   @media (max-width: $media-mobile) {
     font-size: 14.5px;
     line-height: 16px;
+  }
+}
+
+@keyframes chessUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }

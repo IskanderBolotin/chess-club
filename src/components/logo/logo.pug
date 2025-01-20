@@ -2,7 +2,7 @@ mixin logo()
   a(href="#").logo
     span.figures
       - for (var x = 0; x < 4; x++)
-        span.__icon
+        span.__icon.animate-element
           svg
             use(xlink:href="./icons/sprite.svg#logo-figure")  
     span.text
