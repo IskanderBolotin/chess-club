@@ -63,6 +63,7 @@
 .sections {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   list-style: none;
   &__item {
     margin: 0 0 200px;
