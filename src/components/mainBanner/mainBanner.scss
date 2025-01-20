@@ -158,7 +158,7 @@
   height: 100%;
   &.animate-element {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(20px);
     transition: .25s .25s opacity linear, .25s .25s transform linear;
     &.__animation {
       opacity: 1;
@@ -175,7 +175,7 @@
   height: 97.505%;
   &.animate-element {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(20px);
     transition: .25s .25s opacity linear, .25s .25s transform linear;
     &.__animation {
       opacity: 1;
