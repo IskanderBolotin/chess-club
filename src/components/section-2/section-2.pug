@@ -3,24 +3,31 @@
   var gridContent = [
     {
       text: "Строительство железнодорожной магистрали Москва-Васюки",
+      isItem: true,
     },
     {
       text: "Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов",
+      isItem: false,
     },
     {
       text: "Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет",
+      isItem: true,
     },
     {
       text: "Строительство дворца для турнира",
+      isItem: true,
     },
     {
       text: "Размещение гаражей для гостевого автотранспорта",
+      isItem: false,
     },
     {
       text: "Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов",
+      isItem: true,
     },
     {
       text: "Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн",
+      isItem: true,
     }
   ];
 
@@ -73,23 +80,23 @@ mixin section-2()
         h2.__title 
           span.innerText 
             | Этапы преображения Васюков #[a.__link(href="/") Будущие источники обогащения васюкинцев]
-        div.gridWrapper
-          div.sectionGrid
-            each item in gridContent
-              div.__item 
-                div.__inner
-                  +picture(stampImage.sources, stampImage.img, "stamp")
-                  +picture(stampBgImage.sources, stampBgImage.img, "stamp-bg")
-                  p.__text 
-                    | !{item.text}
-            +picture(planeImage.sources, planeImage.img, "plane")
-          div.__controls
-            div.controls
-              div.control-arrow
-                +aroundButton(true)(class="slider-prev")
-              div.control-counter
-                span.slider-counter.slider-current-count 3
-                span.slider-separator /
-                span.slider-counter.slider-all-count 6
-              div.control-arrow
-                +aroundButton()(class="slider-next")
+        div.gridContainer#step-slider
+          div.__wrapper
+            div.sectionGrid.sliderTrack
+              each item in gridContent
+                div.__item(class={sliderListItem: item.isItem}) 
+                  div.__inner
+                    +picture(stampImage.sources, stampImage.img, "stamp")
+                    +picture(stampBgImage.sources, stampBgImage.img, "stamp-bg")
+                    p.__text 
+                      | !{item.text}
+            div.__controls
+              div.controls
+                div.control-arrow
+                  +aroundButton(true)(class="sliderPrev")
+                div.control-dots
+                  each item in [1, 2, 3, 4, 5]
+                    div.slider-dot.sliderDots
+                div.control-arrow
+                  +aroundButton()(class="sliderNext")
+          +picture(planeImage.sources, planeImage.img, "plane")

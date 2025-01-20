@@ -121,9 +121,9 @@ mixin section-3()
             | Участники турнира
       div.sliderContainer#chess-slider
         div.__wrapper
-          div.slider
+          div.slider.sliderTrack
             each item in sliderContent
-              div.__item
+              div.__item.sliderListItem
                 div.chessCard
                   div.__avatar
                     div.avatarInner
@@ -135,10 +135,10 @@ mixin section-3()
         div.__controls
           div.controls
             div.control-arrow
-              +aroundButton(true)(class="slider-prev")
+              +aroundButton(true)(class="sliderPrev")
             div.control-counter
-              span.slider-counter.slider-current-count 3
+              span.slider-counter.slider-current-count.sliderCurrentValue 3
               span.slider-separator /
-              span.slider-counter.slider-all-count 6
+              span.slider-counter.slider-all-count.sliderAllValue 6
             div.control-arrow
-              +aroundButton()(class="slider-next")
+              +aroundButton()(class="sliderNext")

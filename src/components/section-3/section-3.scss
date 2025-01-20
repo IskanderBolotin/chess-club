@@ -20,31 +20,6 @@
     }
   }
 }
-.controls {
-  display: flex;
-  align-items: center;
-}
-.control-counter {
-  min-width: 35px;
-  margin: 0 14px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  display: flex;
-  @media (max-width: $media-mobile) {
-    margin: 0 11px;
-  }
-}
-.slider-separator {
-  padding: 0 4px;
-}
-.slider-counter {
-  width: 11px;
-}
-.slider-separator,
-.slider-all-count {
-  opacity: 0.6;
-}
 .slider {
   display: flex;
   margin: 0 -10px;

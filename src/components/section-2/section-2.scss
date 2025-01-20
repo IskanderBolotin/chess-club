@@ -1,5 +1,11 @@
 @use "../../scss/variables.scss" as *;
-.gridWrapper {
+.gridContainer {
+  position: relative;
+  &__wrapper {
+    @media (max-width: $media-mobile) {
+      overflow: hidden;
+    }
+  }
   &__controls {
     display: none;
     @media (max-width: $media-mobile) {
@@ -10,9 +16,21 @@
       height: 36px;
     }
   }
+  .plane {
+    position: absolute;
+    right: -5.11%;
+    bottom: -2px;
+    width: 32.78%;
+    @media (max-width: $media-mobile) {
+      max-width: 100%;
+      width: 335px;
+      left: 52.5%;
+      transform: translate(-50%, 33.5%) rotate(-4deg);
+      bottom: 100%;
+    }
+  }
   @media (max-width: $media-mobile) {
-    padding-top: 126px;
-    overflow: hidden;
+    margin-top: 126px;
   }
 }
 .sectionGrid {
@@ -21,8 +39,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
+  transition: .25s linear transform;
   @media (max-width: $media-mobile) {
-    gap: 0 40px;
+    gap: 0;
     grid-template-columns: repeat(5, 100%);
   }
   &__inner {
@@ -155,19 +174,6 @@
           }
         }
       }
-    }
-  }
-  .plane {
-    position: absolute;
-    right: -5.11%;
-    bottom: -2px;
-    width: 32.78%;
-    @media (max-width: $media-mobile) {
-      max-width: 100%;
-      width: 335px;
-      left: 52.5%;
-      transform: translate(-50%, 33.5%) rotate(-4deg);
-      bottom: 100%;
     }
   }
 }
